@@ -1,11 +1,29 @@
-$(document).ready(function(){
-    // 
-    $('#red').click(function(){
-        $('#text').css('color','#b71f1f')
+$(document).ready(function () {
+
+    // SOLUTION 1
+    
+    $("#b1").click(function () {
+        //Toggle la classe et accroche des styles à chaque classe
+        // $("#text").toggleClass("green");
+        $("#text").css("color", "green");
+
+    });
+    $("#b2").click(function () {
+        //Toggle la classe et accroche des styles à chaque classe
+        // $("#text").toggleClass("red");
+        $("#text").css({"color": "red"});
+
+    });
+    $("#b3").click(function () {
+        //Toggle la classe et accroche des styles à chaque classe
+        // $("#text").toggleClass("blue");
+        $("#text").css({"color": "blue"});
     });
 
-    $('#blue').click(function(){
-        $('#text').css('color','#5969e0')
-    });
+    // SOLUTION 2
 
+    $(".color").click(function () {
+        let colorButton = $(this).attr("id");
+        $("#text").css("color", colorButton);
+    });
 });
